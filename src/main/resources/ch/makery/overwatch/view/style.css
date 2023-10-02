@@ -1,0 +1,57 @@
+.progress-bar {
+    -fx-box-border: goldenrod;
+}
+
+.green-bar {
+    -fx-accent: green;
+}
+.yellow-bar {
+    -fx-accent: yellow;
+}
+.orange-bar {
+    -fx-accent: orange;
+}
+
+.label {
+    -fx-font-family: "Arial";
+}
+
+.button {
+    -fx-background-color: #FA9C1D;
+    -fx-border-color: #FA9C1D;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.button:hover {
+    -fx-background-color: #E18C1A;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.hero-button {
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+}
+
+.hero-button:hover {
+    -fx-background-color: #FA9C1D;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#1d1d1d,20%);
+}
+
+.menu-bar .label {
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+}
+
+.menu-bar .menu-item .label {
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+}
+

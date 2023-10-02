@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="1067.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.overwatch.view.GameController">
+   <children>
+      <ImageView fitHeight="606.0" fitWidth="1067.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../images/map.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="-38.423828125" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fx:id="consoleText" fill="WHITE" layoutX="375.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="282.205078125">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <FlowPane columnHalignment="CENTER" layoutX="40.0" layoutY="100.0" prefHeight="600.0" prefWidth="1067.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="533.0" spacing="10.0">
+               <children>
+                  <VBox spacing="5.0">
+                     <children>
+                        <HBox alignment="CENTER" prefWidth="550.0" spacing="5.0">
+                           <children>
+                              <Label ellipsisString="" prefWidth="57.0" text="Health:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ProgressBar fx:id="player1HealthBar" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="400.0" progress="1.0" styleClass="green-bar" />
+                              <Label fx:id="player1HealthLabel" ellipsisString="" prefWidth="49.0" text="100.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefWidth="550.0" spacing="5.0">
+                           <children>
+                              <Label ellipsisString="" prefHeight="16.0" prefWidth="57.0" text="Stamina:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ProgressBar fx:id="player1StaminaBar" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="400.0" progress="1.0" styleClass="orange-bar" />
+                              <Label fx:id="player1StaminaLabel" prefWidth="49.0" text="100.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="player1HeroLabel" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="player1HeroImage" fitHeight="420.0" fitWidth="361.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/soldier76.png" />
+                     </image>
+                  </ImageView>
+                  <ButtonBar buttonOrder="U+L_HE+FBIX_NCYOA_R" prefHeight="25.0" prefWidth="365.0">
+                     <buttons>
+                        <Button fx:id="player1Ability1" mnemonicParsing="false" onAction="#player1handleAbility1" />
+                        <Button fx:id="player1Ability2" mnemonicParsing="false" onAction="#player1handleAbility2" />
+                        <Button fx:id="player1Ability3" mnemonicParsing="false" onAction="#player1handleAbility3" />
+                        <Button fx:id="player1Ability4" mnemonicParsing="false" onAction="#player1handleAbility4" />
+                     </buttons>
+                  </ButtonBar>
+               </children>
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+               <padding>
+                  <Insets bottom="20.0" left="8.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="533.0" spacing="10.0">
+               <children>
+                  <VBox spacing="5.0">
+                     <children>
+                        <HBox alignment="CENTER" prefWidth="550.0" spacing="5.0">
+                           <children>
+                              <Label ellipsisString="" prefWidth="62.0" text="Health:" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ProgressBar fx:id="player2HealthBar" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="400.0" progress="1.0" styleClass="green-bar" />
+                              <Label fx:id="player2HealthLabel" prefWidth="49.0" text="100.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefWidth="550.0" spacing="5.0">
+                           <children>
+                              <Label ellipsisString="" prefHeight="16.0" prefWidth="62.0" text="Stamina:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ProgressBar fx:id="player2StaminaBar" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="400.0" progress="1.0" styleClass="orange-bar" />
+                              <Label fx:id="player2StaminaLabel" prefWidth="49.0" text="100.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="player2HeroLabel" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="player2HeroImage" fitHeight="420.0" fitWidth="361.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/moira.png" />
+                     </image>
+                  </ImageView>
+                  <ButtonBar buttonOrder="U+L_HE+FBIX_NCYOA_R">
+                     <buttons>
+                        <Button fx:id="player2Ability1" mnemonicParsing="false" onAction="#player2handleAbility1" />
+                        <Button fx:id="player2Ability2" mnemonicParsing="false" onAction="#player2handleAbility2" />
+                        <Button fx:id="player2Ability3" mnemonicParsing="false" onAction="#player2handleAbility3" />
+                        <Button fx:id="player2Ability4" mnemonicParsing="false" onAction="#player2handleAbility4" />
+                     </buttons>
+                  </ButtonBar>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="8.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
